@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useOktaAuth } from '@okta/okta-react';
 import OktaSignInWidget from './OktaSignInWidget';
+import configData from './config.json';
 
 function Home() {
   const { oktaAuth, authState } = useOktaAuth();
@@ -23,7 +24,7 @@ function Home() {
     <div className="page">
       <h1>Login with React</h1>
       <OktaSignInWidget
-      baseUrl='https://derek.okta.com'
+      baseUrl={configData.tenantUrl}
       onSuccess={onSuccess}
       onError={onError}
       authClient={oktaAuth}/>

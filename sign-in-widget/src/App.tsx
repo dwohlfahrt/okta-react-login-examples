@@ -6,10 +6,11 @@ import Private from './Private';
 import { LoginCallback, Security, SecureRoute } from '@okta/okta-react';
 import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import { Route, useHistory } from 'react-router-dom';
+import configData from './config.json';
 
 const oktaAuth = new OktaAuth({
-  issuer: 'https://derek.okta.com/oauth2/default',
-  clientId: '0oa16gbbbmGzL6hMv5d7',
+  issuer: `${configData.tenantUrl}/oauth2/default`,
+  clientId: configData.clientId,
   redirectUri: window.location.origin + '/callback'
 });
 
