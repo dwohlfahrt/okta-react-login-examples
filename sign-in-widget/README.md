@@ -1,4 +1,5 @@
 # Using the Sign In Widget with React and TypeScript
+Adapted from https://github.com/oktadev/okta-react-login-example
 
 ## Run Locally
 1. `cd` to this directory in a terminal shell
